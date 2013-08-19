@@ -1,0 +1,17 @@
+10/04/01 v1.3	fixes compatibility issue with new prism2 driver by Michael Lynn.
+		If you haven't already, pick up the patch for new prism2 driver.
+		It changes the netlink crap to PF_PACKET stuff that most other
+		sniffers use.  
+
+9/27/01 v1.2	fixes major bug: variable length tag (SSID) was not accounted
+		for as being "variable," therefore, the primary channel was 
+		not being properly detected. (I'd hard-coded the byte
+		locations to match my "beacon" and didn't account for the
+		fact that its not a Good Thing(tm) to do that.
+
+9/24/01 v1.1 	fixes compatibility issue with 2.2.* kernel not supporting
+		SO_RCVTIMEO.  unnecessary code flushed.  
+		fix/patch provided by: (Lars Hofhansl)
+
+9/21/01 v1.0	first release.
+

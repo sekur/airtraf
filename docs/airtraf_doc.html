@@ -1,0 +1,903 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Elixar &gt;&gt; Products &gt;&gt; AirTraf &gt;&gt; AirTraf 1.0 (Documentation)</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../elixar.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" vlink="#0000CC">
+<table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td colspan="2" align="left"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="3" valign="top"><img src="../images/greyline.gif" width="750" height="1"></td>
+        </tr>
+        <tr> 
+          <td valign="top" background="../images/indent_spacer.gif" id="remove"> 
+            <img src="../images/spacer.gif" width="21" height="1"></td>
+          <td valign="top" width="610"> <img src="../images/spacer.gif" width="610" height="20"><br> 
+            <span class="largeheadertext">AirTraf 1.0 Documentation</span><BR>
+            <br>
+			<strong>
+			<a href="airtraf_documentation.html#installation">Installation</a><br>
+			<a href="airtraf_documentation.html#quickstart">Quick Start</a><br>
+			<a href="airtraf_documentation.html#navigation">Navigation</a><br>
+			<a href="airtraf_documentation.html#reference">Reference Guide</a><br>
+			</strong>
+			<br>
+			<hr>
+			<br>
+            <a name="installation"></a><span class="largeheadertext">Installation</span><br>
+            <span class="smallfadedtext"> 
+            <ol>
+              <li>Make sure libncurses is installed on your machine. (This is 
+                usually included by your distribution.)</li>
+              <li>Untar the AirTraf 1.0 tarball into the target directory.</li>
+              <li>Change into src directory.</li>
+              <li>Run 'make all' to compile sources.</li>
+              <li>Run 'make install' to install program.</li>
+              <li>Run 'airtraf' and follow directions to auto-configure.</li>
+            </ol>
+            </span> 
+            <hr>
+            <a name="quickstart"></a><span class="largeheadertext">Quick Start</span><br>
+            <br>
+            <span class="smallfadedtext">This tutorial will walk you through the 
+            steps of a standard use session of AirTraf 1.0 (assuming that the 
+            software and network interface card drivers have already been installed 
+            and compiled).</span> <br>
+            <span class="headertext">Launch AirTraf</span> 
+            <ol>
+              <li><span class="smallfadedtext">Launch AirTraf by typing "airtraf" 
+                at the Linux command prompt.</span> 
+              <li><span class="smallfadedtext">You will see a message informing 
+                you what wireless NIC the auto-configuration utility discovered. 
+                To set-up this NIC for use with the application, type "y". To 
+                skip this step, you can type "airtraf -f" at the Linux command 
+                prompt in place of step 1.</span> 
+              <li><span class="smallfadedtext">At AirTraf's intro screen, press 
+                any key to advance to the main menu.</span> 
+            </ol>
+            <span class="headertext">Scan Access Points</span> 
+            <ol start="4">
+              <li><span class="smallfadedtext">Select the first menu item Scan 
+                Channels for AP Activity. You will be taken to a screen that displays 
+                the discovered Access Points in wireless range of your system. 
+                This screen will also provide basic information about the monitored 
+                wireless networks including the Access Point identifiers, encryption 
+                status, channels in use, and more.</span> 
+              <li><span class="smallfadedtext">Press "x" to return to the main 
+                menu.</span> 
+            </ol>
+            <span class="headertext">Select Target Access Point</span> 
+            <ol start="6">
+              <li><span class="smallfadedtext">A dialog box will appear allowing 
+                you to select which of the discovered Access Points you wish to 
+                focus your attention to.</span> 
+            </ol>
+            <span class="headertext">View Analysis</span> 
+            <ol start="7">
+              <li><span class="smallfadedtext">Select the Detailed Access Point 
+                monitor menu item. You will be taken to a screen that displays 
+                details about the selected Access Point. In the Connected Node 
+                window you will see wireless nodes, including the Access Point, 
+                which have been discovered. MAC Address 0 is the Access Point, 
+                and other MAC address listings refer to monitored nodes.</span> 
+              <li><span class="smallfadedtext">Press "x" to return to the main 
+                menu.</span> 
+              <li><span class="smallfadedtext">Select the General protocol statistics 
+                menu item. You will be taken to a screen that displays further 
+                details about the type of packets being monitored.</span> 
+              <li><span class="smallfadedtext">Press "x" to return to the main 
+                menu.</span> 
+              <li><span class="smallfadedtext">Select the TCP Performance Analysis 
+                menu item. You will be taken to a screen that displays specific 
+                TCP connection information about each monitored node. Using the 
+                arrow keys will allow you to cycle through the monitored nodes 
+                or through the TCP connection history, depending on which window 
+                you have active. To switch which window is active, press "w". 
+                When the TCP connection window (the top window) is active, pressing 
+                "v" will toggle the information displayed (including connections, 
+                bandwidth, latency, etc.)</span> 
+              <li><span class="smallfadedtext">Press "x" to return to the main 
+                menu.</span> 
+            </ol>
+            <span class="headertext">Capture a Session</span> 
+            <ol start="13">
+              <li><span class="smallfadedtext">The next several menu items allow 
+                you to capture and playback a session. To start a session capture, 
+                select the Begin Capture Process menu item. Then you can set the 
+                desired file name, overwrite setting (if you do not allow overwrites 
+                and a file with the desired name already exists, you will receive 
+                an error message), and capture interval (how often the application 
+                records data snapshots to the file). Select Accept and Begin. 
+                You can continue to browse through the screens while a capture 
+                is in progress.</span> 
+              <li><span class="smallfadedtext">Select End Capture Process to stop 
+                saving data to the file.</span> 
+            </ol>
+            <span class="headertext">Play Back Captured Session</span> 
+            <ol start="15">
+              <li><span class="smallfadedtext">In order to load and playback the 
+                session capture file, first you must clear the currently selected 
+                Access Point by selecting Change selected target AP and then selecting 
+                Clear Target Access Point. Next, select the Load Capture file 
+                menu item and enter the file name you provided earlier.</span> 
+              <li><span class="smallfadedtext">Now you can go to any of the monitoring 
+                screens already discussed and you will see the addition of VCR 
+                like controls in a window in the lower right corner of the screen. 
+                Use those commands to play through the captured session.</span> 
+              <li><span class="smallfadedtext">From the main menu, press "x" to 
+                exit the application.</span> 
+            </ol>
+            
+            <hr>
+            <a name="navigation"></a><span class="largeheadertext">Navigation</span><br>
+            <br>
+            <p align=left>
+            <span class="smallfadedtext"> AirTraf 1.0 has a menu based, keyboard 
+            driven interface. In general, the arrow keys allow you to cycle though 
+            menu options and enter selects a particular option. In addition, many 
+            choices have a 'hot-key' associated with them. These highlighted letters 
+            serve as a shortcut to that item. Finally, the commands which allow 
+            you to interactively view information on the data access portions 
+            of the program are listed on the bottom of each window. The X, or 
+            Esc key will always bring the program up a level, or if you are on 
+            the main menu will exit the program. </span><br>
+            </p>
+            
+            <hr>
+            <a name="reference"></a><span class="largeheadertext">Main Window</span><br>
+            <br>
+            <a href="../images/airtraf_v1d0_main_screen.gif"><img src="../images/airtraf_v1d0_main_screen (Small).gif" border="0"></a> 
+            <br>
+            <p align=left>
+            <span class="smallfadedtext">The first screen you will see is the 
+            main window. It offers at a glance general information, and allows 
+            you to control the program and select which type of data to focus 
+            on.</span> <br>
+            <br>
+            <span class="headertext">Displayed Data</span><br>
+            <br>
+            <u>Current Target Access Point</u> <br>
+            This window provides information concerning the access point which 
+            is currently being monitored. If you have not yet selected an access 
+            point all the fields will be blank. <br>
+            <br>
+            SSID (Service Set Identifier)<br>
+            A user defined 32 character identifier attached to packets sent over 
+            the wireless LAN. Also known as network name this field allows members 
+            of the same wireless network segment to identify each other. Note 
+            that since packets transmit SSID in clear text filtering on SSID is 
+            a convenience rather than security mechanism. <br>
+            <br>
+            BSSID<br>
+            A machine readable unique network identifier, in most cases the MAC 
+            address of the access point.<br>
+            <br>
+            WEP<br>
+            This field will say "crypt" if the access point is utilizing WEP (wireless 
+            equivalency protocol) and "open" otherwise.<br>
+            <br>
+            Channel<br>
+            Which part of the 2.4Ghz allocated spectrum the access point is using. 
+            While there are in 11 channels, only three can be used simultaneously 
+            (ie. 1, 6 and 11).<br>
+            <br>
+            <u>System Information</u><br>
+            Displays information concerning the environment on which AirTraf is 
+            running, and the mode it is currently running in.<br>
+            <br>
+            Card Settings<br>
+            The type of wireless network card you are using; possible values include 
+            Prisim2, Hermes, Cisco Aironet, or Orinico.<br>
+            <br>
+            Interface<br>
+            The network interface on which your wireless network card resides 
+            (ie eth0, eth1, etc.)<br>
+            <br>
+            Runtime Mode<br>
+            Whether you are displaying real time data or data loaded from a capture 
+            session, possible values are "Real-Time" and "Simulation".<br>
+            <br>
+            Capture Mode<br>
+            Whether or not you are currently capturing data to a file.<br>
+            <br>
+            Uptime<br>
+            How long AirTraf has been running.<br>
+            <br>
+            <u>Capture Information</u><br>
+            Displays information concerning the recording and playback of a session 
+            capture file.<br>
+            <br>
+            Mode<br>
+            What capture mode the program is currently running in, possible values 
+            include "Not Selected", "Session Playback" and "Session Record".<br>
+            <br>
+            File<br>
+            The filename of the current session file.<br>
+            <br>
+            Size<br>
+            The size of the session file, updated in realtime while capturing.<br>
+            <br>
+            Date<br>
+            The file creation date of the current session file.<br>
+            <br>
+            Time<br>
+            The file creation time of the current session file.<br>
+            <br>
+            Duration<br>
+            How long the capture session is, updated in realtime while capturing.<br>
+            <br>
+            Status<br>
+            The status of a capture session, possible values are "Running", "Completed" 
+            and "Inactive".<br>
+            <br>
+            <span class="headertext">Commands</span><br>
+            <br>
+            <Strong>S</Strong>can Channels for AP Activity<br>
+            This option allows you to scan the all the channels for available 
+            access points. It is necessary to do a preliminary scan before selecting 
+            an access point to monitor. This is also the interface to a continuous 
+            scan, which will reveal any access points within range of the sensor.<br>
+            <br>
+            <strong>C</strong>hange Selected Target AP<br>
+            This enables you to select one of the available access points (as 
+            discovered in a scan) to monitor. You will be automatically prompted 
+            to select a access on exiting from the scan channels interface. This 
+            selection also allows you to clear the target access point which is 
+            necessary before loading a capture session.<br>
+            <br>
+            Detailed <strong>A</strong>ccess Point Monitor<br>
+            Display detailed statistics on the selected target access point and 
+            the connected nodes. The information available describes the data 
+            passing over the network broken down along several discrete axes such 
+            as type of frame (management, control, data) and by transmitting node. 
+            <br>
+            <br>
+            <strong>G</strong>eneral Protocol Statistics<br>
+            Display information on which protocols are being used on the wireless 
+            network. Aggregate and detailed statistics are available on MAC, network 
+            and transport layer protocols.<br>
+            <br>
+            TCP <strong>P</strong>erformance Analysis<br>
+            Display specific information concerning about a connected node. Select 
+            a node and show details on the type, bandwidth, and statistics of 
+            its TCP connections.<br>
+            <br>
+            <strong>B</strong>egin Capture Process<br>
+            Allows you to capture monitoring data to a file in order to be reviewed 
+            at your leisure. Capture process allows you to set the sample rate 
+            in order to exert fine grain control over the size of the capture 
+            file.<br>
+            <br>
+            <strong>E</strong>nd Capture Process<br>
+            Stop capturing monitoring data to a file.<br>
+            <br>
+            <strong>L</strong>oad Capture File<br>
+            Load a previously captured session into memory, allowing you to play, 
+            rewind and fast forward through the data in each of the possible data 
+            windows. <br>
+            <br>
+            <strong>U</strong>nload Capture File<br>
+            Clear the current capture file, you must do this before you can resume 
+            real time monitoring. <br></p>
+            
+            <hr>
+            <span class="largeheadertext">Scan Channels for AP Activity</span><br>
+            <br>
+            <p align=left>
+            <a href="../images/airtraf_v1d0_scan_screen.gif"><img src="../images/airtraf_v1d0_scan_screen (Small).gif" border="0"></a> 
+            <span class="smallfadedtext"> <br>
+            This screen allows you to scan all the channels for available access 
+            points. It is necessary to do a preliminary scan before selecting 
+            an access point to monitor. This is also the interface to a continuous 
+            scan, which will reveal any access points within range of the sensor. 
+            <br>
+            <br>
+            </span> <span class="headertext">Displayed Data</span><br>
+            <br><span class="smallfadedtext">
+            <u>Activity Overview</u><br>
+            This pane displays the number of detected networks and their distribution 
+            across the available channels. Note that the list has 14 total channels 
+            because the 802.11b standard defines that many; due to FCC regulations 
+            only the first 11 are usable in the United States. <br>
+            <br>
+            <u>Detailed Breakdown</u><br>
+            Summary information on each of the detected access points.<br>
+            <br>
+            Ch<br>
+            Which part of the 2.4Ghz allocated spectrum the access point is using. 
+            While there are in 11 channels, only three can be used simultaneously 
+            (ie. 1, 6 and 11). <br>
+            <br>
+            Type<br>
+            What type of network is detected, possible values are AP (infrastructure 
+            mode) and Adhoc. <br>
+            <br>
+            SSID (Service Set Identifier)<br>
+            A user defined 32 character identifier attached to packets sent over 
+            the wireless LAN. Also known as network name this field allows members 
+            of the same wireless network segment to identify each other. Note 
+            that since packets transmit SSID in clear text filtering on SSID is 
+            a convenience rather than security mechanism. <br>
+            <br>
+            BSSID<br>
+            A machine readable unique network identifier, in most cases the MAC 
+            address of the access point. <br>
+            <br>
+            WEP<br>
+            This field will say "crypt" if the access point is utilizing WEP (wireless 
+            equivalency protocol) and "open" otherwise. <br>
+            <br>
+            Mgmt<br>
+            The number of management frames that have been broadcast. Examples 
+            of management frames are beacon frames, disassociation frames and 
+            probe requests. <br>
+            <br>
+            Ctrl<br>
+            The number of control frames that have been broadcast. Examples of 
+            control frames are acknowledgement, CTS (clear to send), and RTS (ready 
+            to send) frames. <br>
+            <br>
+            Data<br>
+            The number of clear text data frames that have been broadcast. <br>
+            <br>
+            Crypt<br>
+            The number of WEP encoded data frames that have been broadcast. <br>
+            <br>
+            Signal<br>
+            The signal strength as reported by the driver. This feature may require 
+            the use of a patched driver. <br>
+            <br>
+            <u>Current Status</u><br>
+            This pane lists scan events. Events are the detection of a new network, 
+            a network slipping into inactive status, and the reappearance of a 
+            inactive network.<br>
+            <br>
+            </span> <span class="headertext">Commands</span><br>
+            <br>
+            <span class="smallfadedtext"> <strong>F</strong>orce New Scan<br>
+            Clears the current access point information and initiates a new scan.<br></span></p>
+            
+            <hr>
+            <span class="largeheadertext">Detailed Access Point Monitor</span><br>
+            <br>
+            <span class="smallfadedtext"> <a href="../images/airtraf_v1d0_det_mon_screen.gif"><img src="../images/airtraf_v1d0_det_mon_screen%20(Small).gif"></a> 
+            <br>
+            This screen displays detailed statistics on a specific access point 
+            and summery data on its connected nodes.<br>
+            <br>
+            </span> <span class="headertext">Displayed Data</span><br>
+            <br><span class="smallfadedtext">
+            <u>Statistics</u><br>
+            Provides a detailed breakdown on the different MAC layer components 
+            which make up the total traffic on the monitored network.<br>
+            <br>
+            <table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td> <span class="smallfadedtext"> Beacon<br>
+                  Number of beacon frames. Beacon frames are broadcast by access 
+                  points at regular intervals. Beacon frames can contain the following 
+                  information: beacon interval, timestamp, SSID, supported rates, 
+                  parameter sets, capability information and traffic indication 
+                  map (TIM). <br>
+                  <br>
+                  Disassoc<br>
+                  Number of disassociation frames. Disassociation frames should 
+                  normally only be sent when a node is going offline. An inordinate 
+                  number of disassociation frames can be an indication of an attempted 
+                  man in the middle attack. <br>
+                  <br>
+                  Other<br>
+                  All other management frames. These include: authentication frames, 
+                  deauthentication frames, association request frames, association 
+                  response frames, reassociation request frames, reassociation 
+                  response frames, probe request frames and probe response frames. 
+                  <br>
+                  <br>
+                  Total Packets<br>
+                  <br>
+                  Total Bytes<br>
+                  <br>
+                  Bandwidth<br>
+                  This is a real time indication of total bandwidth used by management 
+                  frames on the monitored network. <br>
+                  <br>
+                  </span> </td>
+              </tr>
+            </table>
+            Control Frames<br>
+            Statistics concerning control frames. Control frames are used to implement 
+            the low level data transfer between wireless devices.<br>
+            <br>
+            <table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td> <span class="smallfadedtext"> Acknowledgements<br>
+                  Number of acknowledgement frames. Acknowledgement frames are 
+                  sent upon the successful receipt of an error free frame, if 
+                  no acknowledgement frame is received the sender will resend. 
+                  <br>
+                  <br>
+                  Other<br>
+                  All other control frames. These include optional CTS (clear 
+                  to send) and RTS (ready to send) frames, which implement CSM/CD 
+                  (Carrier Sense Multiple Access/Collision Detect) over the wireless 
+                  medium. <br>
+                  <br>
+                  Total Packets<br>
+                  <br>
+                  Total Bytes<br>
+                  <br>
+                  Bandwidth<br>
+                  This is a real time indication of total bandwidth used by control 
+                  frames on the monitored network.<br>
+                  </span> </td>
+              </tr>
+            </table>
+            <br>
+            Data Frames<br>
+            Data frames contain all upper level protocols.<br>
+            <br>
+            <table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td> <span class="smallfadedtext"> External Packets<br>
+                  Total number of packets destined for any address other than 
+                  nodes associated with the target access point.<br>
+                  <br>
+                  <br>
+                  External Bytes<br>
+                  Total bytes of data traffic destined for any address other than 
+                  nodes associated with the target access point. <br>
+                  <br>
+                  Internal Packets<br>
+                  Total number of packets from one connected to another. <br>
+                  <br>
+                  Internal Bytes<br>
+                  Total bytes of data traffic from one connected to another. <br>
+                  <br>
+                  Total Packets<br>
+                  <br>
+                  Total Bytes<br>
+                  <br>
+                  Bandwidth<br>
+                  Real time indication of total bandwidth used by all data frames 
+                  on the monitored network. <br>
+                  <br>
+                  </span> </td>
+              </tr>
+            </table>
+            Corrupt Frames<br>
+            <br>
+            <table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td> <span class="smallfadedtext"> Bad MAC Addr<br>
+                  Number and total bytes of frames with corrupt or invalid MAC 
+                  addresses. <br>
+                  <br>
+                  Bad IP Chksum<br>
+                  Number and total bytes of frames which contain packets with 
+                  incorrect IP checksums. <br>
+                  <br>
+                  FCS Error<br>
+                  Number and total bytes of frames whose frame check sequence 
+                  (FCS) does not match the given value. <br>
+                  <br>
+                  Filtered Data<br>
+                  This value represents the number of corrupt frames when utilizing 
+                  a Cisco Aironet card. Please see known issues for more information. 
+                  <br>
+                  <br>
+                  Overall<br>
+                  Total number and total bytes of frames which are corrupt in 
+                  some fashion. <br>
+                  <br>
+                  </span> </td>
+              </tr>
+            </table>
+            Overall Activity<br>
+            <br>
+            <table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td> <span class="smallfadedtext"> Total Packets<br>
+                  <br>
+                  Total Bytes<br>
+                  <br>
+                  Bandwidth<br>
+                  Real time indication of total bandwidth used by all nodes of 
+                  the monitored network.<br>
+                  <br>
+                  </span> </td>
+              </tr>
+            </table>
+            Link Quality Analysis<br>
+            <br>
+            <table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td> <span class="smallfadedtext"> Link Utilization<br>
+                  This percentage is calculated using the theoretical maximum 
+                  capacity of 11Mbps. <br>
+                  <br>
+                  Background Noise<br>
+                  This value represents the non-data traffic which originates 
+                  from outside the wireless network. This largely consist of broadcast 
+                  traffic. This is a very useful tool for measuring the bandwidth 
+                  used for protocol overhead (such as windows networking). If 
+                  this number is excessive you should consider making the wireless 
+                  network its own subnet or shutting off non-essential protocols. 
+                  <br>
+                  <br>
+                  Packet Loss<br>
+                  The percentage of the link capacity lost due to corrupt frames, 
+                  if this number is excessive consider turning on contention control 
+                  software in your AP (RTS, CTS). <br>
+                  <br>
+                  </span> </td>
+              </tr>
+            </table>
+            <span class="smallfadedtext"><u>Connected Nodes</u><br>
+            <br>
+            MAC Address<br>
+            Address of connected node.<br>
+            <br>
+            Type<br>
+            Node type, possible values are: "AP" and "STA" (station).<br>
+            <br>
+            IP<br>
+            IP address of connected nodes. Note access points do not generally 
+            have an IP address.<br>
+            <br>
+            Incoming Packets<br>
+            Number of packets which have been sent to the node.<br>
+            <br>
+            Incoming Bytes<br>
+            Total number of bytes sent to the node.<br>
+            <br>
+            Outgoing Packets<br>
+            Number of packets which have been sent from the node.<br>
+            <br>
+            Outgoing Bytes<br>
+            Total number of bytes sent from the node.<br>
+            <br>
+            Avg. Signal Strength<br>
+            Signal strength between the monitor and the node as reported by the 
+            wireless driver, averaged over the observed time.<br>
+            <br>
+            Bandwidth<br>
+            Read time indication of total bandwidth consumed by the indicated 
+            node.<br>
+            </span><br>
+            <span class="headertext">Commands</span> <br><span class="smallfadedtext"> 
+            <strong>F</strong>orce New Scan<br>
+            Clears the current access point information and initiates a new scan.<br>
+            <hr>
+            <span class="largeheadertext">Detailed Access Point Monitor</span><br>
+            <br>
+            <a href="../images/airtraf_v1d0_gen_proto_screen.gif"><img src="../images/airtraf_v1d0_gen_proto_screen%20(Small).gif"></a> 
+            <br>
+            <span class="smallfadedtext"> This screen displays detailed information 
+            on the what protocols are being used on the monitored network.<br>
+            </span> <br>
+            <span class="headertext">Displayed Data</span><br>
+            <span class="smallfadedtext"> <br>
+            <u>Activity Overview</u><br>
+            <br>
+            Access Point Information<br>
+            Information concerning the currently selected access point.<br>
+            <br>
+            <table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><span class="smallfadedtext">SSID (Service Set Identifier)<br>
+                  A user defined 32 character identifier attached to packets sent 
+                  over the wireless LAN. Also known as network name this field 
+                  allows members of the same wireless network segment to identify 
+                  each other. Note that since packets transmit SSID in clear text 
+                  filtering on SSID is a convenience rather than security mechanism. 
+                  <br>
+                  <br>
+                  BSSID<br>
+                  A machine readable unique network identifier, in most cases 
+                  the MAC address of the access point. <br>
+                  <br>
+                  WEP<br>
+                  This field will say "crypt" if the access point is utilizing 
+                  WEP (wireless equivalency protocol) and "open" otherwise. <br>
+                  <br>
+                  Channel<br>
+                  Which part of the 2.4Ghz allocated spectrum the access point 
+                  is using. While there are in 11 channels, only three can be 
+                  used simultaneously (ie. 1, 6 and 11). <br>
+                  <br>
+                  </span></td>
+              </tr>
+            </table>
+            Usage Rating<br>
+            The percentage of the total traffic consumed by each protocol type. 
+            Note that packets may belong to more then one protocol type - for 
+            example standard web traffic is data, IP, and TCP. <br>
+            <br>
+            <table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><span class="smallfadedtext"><span class="smallfadedtext">MAC 
+                  Layer<br>
+                  <br>
+                  </span> <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">Management<br>
+                        The percentage of the traffic comprised of management 
+                        frames. Examples of management frames are beacon frames, 
+                        disassociation frames and probe requests. <br>
+                        <br>
+                        Control<br>
+                        The percentage of the traffic comprised of control frames. 
+                        Examples of control frames are acknowledgement, CTS (clear 
+                        to send), and RTS (ready to send) frames. <br>
+                        <br>
+                        Data<br>
+                        The percentage of the traffic comprised of data frames. 
+                        Data frames contain all upper level protocols. <br>
+                        <br>
+                        Channel<br>
+                        Which part of the 2.4Ghz allocated spectrum the access 
+                        point is using. While there are in 11 channels, only three 
+                        can be used simultaneously (ie. 1, 6 and 11). <br>
+                        <br>
+                        </span></td>
+                    </tr>
+                  </table>
+                  <br> <span class="smallfadedtext">Network Layer</span> <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">IP<br>
+                        The percentage of the traffic comprised of IP packets. 
+                        IP (internet protocol) is the most commonly used 3 layer 
+                        protocol and is used by a wide variety of higher level 
+                        protocols. <br>
+                        <br>
+                        IPv6<br>
+                        IPv6 is a new layer 3 protocol designed to mitigate scaling 
+                        problems with the original IP specification. <br>
+                        <br>
+                        Other<br>
+                        All other layer 3 protocols, such as IPX and appletalk.<br>
+                        <br>
+                        </span></td>
+                    </tr>
+                  </table>
+                  <br> <span class="smallfadedtext">Transport Layer</span><br> 
+                  <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">TCP<br>
+                        The percentage of the traffic comprised of TCP packet. 
+                        TCP, Transmission Control Protocol, is a layer four protocol 
+                        which is used to create reliable connections between two 
+                        computers. By far the most common traffic on a standard 
+                        network is TCP running over IP (TCP/IP).<br>
+                        <br>
+                        UDP<br>
+                        The percentage of the traffic comprised of UDP packets. 
+                        UDP, user datagram protocol, is a sister protocol to TCP. 
+                        Unlike TCP, UDP does not guarantee transmission. It is 
+                        useful for upper level protocols which can handle some 
+                        dropped packets (such as streaming video).<br>
+                        <br>
+                        Data<br>
+                        The percentage of the traffic comprised of data frames. 
+                        Data frames contain all upper level protocols. <br>
+                        <br>
+                        ICMP<br>
+                        The percentage of the traffic comprised of ICMP packets. 
+                        ICMP, internet control message protocol, are the maintenance 
+                        packets of the transport layer. ICMP traffic includes 
+                        pings and error messages. <br>
+                        <br>
+                        Other<br>
+                        The percentage of the traffic comprised of other transport 
+                        layer packets.<br>
+                        </span></td>
+                    </tr>
+                  </table>
+                  <span class="smallfadedtext">Background Traffic<br>
+                  The percentage of the traffic comprised of background traffic. 
+                  This value represents the non-data traffic which originates 
+                  from outside the wireless network. This largely consist of broadcast 
+                  traffic.<br>
+                  </span> </td>
+              </tr>
+            </table>
+            Overall Bandwidth<br>
+            Real time indicator of total bandwidth being consumed by monitored 
+            network.<br>
+            <br>
+            <u>Internal Usage Breakdown</u><br>
+            For each protocol displays how many packets and how many bytes are 
+            coming to the network, and are originating from the network. The real 
+            time total bandwidth consumed is also listed. <br>
+            <br>
+<table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><span class="smallfadedtext"><span class="smallfadedtext">MAC 
+                  Layer<br>
+                  <br>
+                  </span> <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">Management<br>
+                        The percentage of the traffic comprised of management 
+                        frames. Examples of management frames are beacon frames, 
+                        disassociation frames and probe requests. <br>
+                        <br>
+                        Control<br>
+                        The percentage of the traffic comprised of control frames. 
+                        Examples of control frames are acknowledgement, CTS (clear 
+                        to send), and RTS (ready to send) frames. <br>
+                        <br>
+                        Data<br>
+                        The percentage of the traffic comprised of data frames. 
+                        Data frames contain all upper level protocols. <br>
+                        <br>
+                        </span></td>
+                    </tr>
+                  </table>
+                  <br> <span class="smallfadedtext">Network Layer</span> <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">IP<br>
+                        The percentage of the traffic comprised of IP packets. 
+                        IP (internet protocol) is the most commonly used 3 layer 
+                        protocol and is used by a wide variety of higher level 
+                        protocols. <br>
+                        <br>
+                        IPv6<br>
+                        IPv6 is a new layer 3 protocol designed to mitigate scaling 
+                        problems with the original IP specification. <br>
+                        <br>
+                        Other<br>
+                        All other layer 3 protocols, such as IPX and appletalk.<br>
+                        <br>
+                        </span></td>
+                    </tr>
+                  </table>
+                  <br> <span class="smallfadedtext">Transport Layer</span><br> 
+                  <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">TCP<br>
+                        The percentage of the traffic comprised of TCP packet. 
+                        TCP, Transmission Control Protocol, is a layer four protocol 
+                        which is used to create reliable connections between two 
+                        computers. By far the most common traffic on a standard 
+                        network is TCP running over IP (TCP/IP).<br>
+                        <br>
+                        UDP<br>
+                        The percentage of the traffic comprised of UDP packets. 
+                        UDP, user datagram protocol, is a sister protocol to TCP. 
+                        Unlike TCP, UDP does not guarantee transmission. It is 
+                        useful for upper level protocols which can handle some 
+                        dropped packets (such as streaming video).<br>
+                        <br>
+                        Data<br>
+                        The percentage of the traffic comprised of data frames. 
+                        Data frames contain all upper level protocols. <br>
+                        <br>
+                        ICMP<br>
+                        The percentage of the traffic comprised of ICMP packets. 
+                        ICMP, internet control message protocol, are the maintenance 
+                        packets of the transport layer. ICMP traffic includes 
+                        pings and error messages. <br>
+                        <br>
+                        Other<br>
+                        The percentage of the traffic comprised of other transport 
+                        layer packets.<br>
+                        </span></td>
+                    </tr>
+                  </table>
+ </td>
+              </tr>
+            </table>
+<br>
+<u>Background Traffic Breakdown</u><br>
+This section shows a breakdown of the background traffic (the non-data traffic which originates from outside the wireless network.  This largely consist of broadcast traffic.)  For each protocol type the total packets and total bytes, as well as the over all rates are listed.  This is useful for pinpointing specifically which protocols are generating background noise.<br>
+<br>
+<table width="100%" border="0">
+              <tr> 
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><span class="smallfadedtext"><span class="smallfadedtext">MAC 
+                  Layer<br>
+                  <br>
+                  </span> <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">
+                        Data<br>
+                        The percentage of the traffic comprised of data frames. 
+                        Data frames contain all upper level protocols. <br>
+                        <br>
+                        </span></td>
+                    </tr>
+                  </table>
+                  <br> <span class="smallfadedtext">Network Layer</span> <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">IP<br>
+                        The percentage of the traffic comprised of IP packets. 
+                        IP (internet protocol) is the most commonly used 3 layer 
+                        protocol and is used by a wide variety of higher level 
+                        protocols. <br>
+                        <br>
+                        IPv6<br>
+                        IPv6 is a new layer 3 protocol designed to mitigate scaling 
+                        problems with the original IP specification. <br>
+                        <br>
+                        Other<br>
+                        All other layer 3 protocols, such as IPX and appletalk.<br>
+                        <br>
+                        </span></td>
+                    </tr>
+                  </table>
+                  <br> <span class="smallfadedtext">Transport Layer</span><br> 
+                  <table width="100%" border="0">
+                    <tr> 
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><span class="smallfadedtext">TCP<br>
+                        The percentage of the traffic comprised of TCP packet. 
+                        TCP, Transmission Control Protocol, is a layer four protocol 
+                        which is used to create reliable connections between two 
+                        computers. By far the most common traffic on a standard 
+                        network is TCP running over IP (TCP/IP).<br>
+                        <br>
+                        UDP<br>
+                        The percentage of the traffic comprised of UDP packets. 
+                        UDP, user datagram protocol, is a sister protocol to TCP. 
+                        Unlike TCP, UDP does not guarantee transmission. It is 
+                        useful for upper level protocols which can handle some 
+                        dropped packets (such as streaming video).<br>
+                        <br>
+                        Data<br>
+                        The percentage of the traffic comprised of data frames. 
+                        Data frames contain all upper level protocols. <br>
+                        <br>
+                        ICMP<br>
+                        The percentage of the traffic comprised of ICMP packets. 
+                        ICMP, internet control message protocol, are the maintenance 
+                        packets of the transport layer. ICMP traffic includes 
+                        pings and error messages. <br>
+                        <br>
+                        Other<br>
+                        The percentage of the traffic comprised of other transport 
+                        layer packets.<br>
+                        </span></td>
+                    </tr>
+                  </table>
+ </td>
+              </tr>
+            </table>
+<br>
+ </span> 
+ <span class="headertext">Commands</span><br><br>
+<span class="smallfadedtext"><strong>P</strong>ause<br>
+Freezes the screen allowing you to examine a particular instant in time. Note that leaving the current screen will unpause the program.  If you need to examine a range of information on a given moment in time, use the capture session feature.
+<br><br></span>
+ <!-- InstanceEndEditable --> <p></p></td>
+        </tr>
+        <tr> 
+          <td colspan="3"><img src="../images/greyline.gif" width="750" height="1"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --> 
+</html>

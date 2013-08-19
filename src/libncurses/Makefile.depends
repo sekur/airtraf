@@ -1,0 +1,5 @@
+deskman.o: deskman.c stdwinset.h deskman.h error.h
+error.o: error.c attrs.h deskman.h error.h
+input.o: input.c input.h stdwinset.h deskman.h attrs.h
+menurt.o: menurt.c deskman.h attrs.h menurt.h
+stdwinset.o: stdwinset.c

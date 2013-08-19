@@ -1,0 +1,70 @@
+##################################################
+# Makefile.rules
+# airtraf top level
+#
+# by Peter K. Lee <saint@elixar.net>
+# February 2002
+
+SHELL = /bin/sh
+
+##################################################
+# programs
+
+CC       = gcc
+DEBUG    = -ggdb
+CFLAGS   = -Wall -O2
+
+CXX      = c++
+CXXFLAGS = -Wall -O2
+
+LD       = c++
+LDFLAGS  = 
+
+AR       = ar
+ARFLAGS  = cr
+
+RANLIB   = ranlib
+
+JAVAC    = javac
+JAVA     = java
+JAVADOC  = javadoc
+JAR      = jar
+
+INSTALL  = $(TOP)/scripts/install-sh -c
+
+##################################################
+# files
+# each Makefile that includes this should define
+# TOP as the path to the iperf top-level directory
+#
+# LIBOBJS specifies our own implementation of
+# missing OS/libc functions like snprintf
+
+POLL_PROG   = $(TOP)/poll_airtraf
+INIT_PROG   = $(TOP)/init_airtraf
+SNIFF_PROG  = $(TOP)/airtraf
+
+# standard library
+COMMONLIBDIR = $(TOP)/libcommon
+LIBRARY     = $(TOP)/libcommon/libairtraf.a
+
+# ncurses gui library
+NCURSESLIBDIR = $(TOP)/libncurses
+GUI_LIBRARY = $(TOP)/libncurses/libairgui.a 
+
+LIBOBJS = 
+
+##################################################
+# implicit rules
+
+.SUFFIXES:
+.SUFFIXES: .o .c .cpp .java .class
+
+.c.o:
+	$(CC) $(INCS) $(CFLAGS) -c     $<
+
+.cpp.o:
+	$(CXX) $(INCS) $(CXXFLAGS) -c  $<
+
+.java.class:
+	$(JAVAC) $<

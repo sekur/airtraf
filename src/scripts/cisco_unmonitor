@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$1" == "" ]; then
+	echo "$0 <wireless interface>"
+	exit
+fi
+
+echo "Mode: i" > /proc/driver/aironet/$1/Config

@@ -1,0 +1,175 @@
+airtraf.o: airtraf.c ../libcommon/definition.h sniff_include.h \
+ ../libcommon/crc-32.h ../libcommon/frame_info.h ../libcommon/logger.h \
+ ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h \
+ autoconfig.h
+autoconfig.o: autoconfig.c autoconfig.h
+capture_engine.o: capture_engine.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+channel_scan.o: channel_scan.c ../libcommon/definition.h sniff_include.h \
+ ../libcommon/crc-32.h ../libcommon/frame_info.h ../libcommon/logger.h \
+ ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+detailed_analysis.o: detailed_analysis.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+detailed_scan.o: detailed_scan.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+gui_capture_utils.o: gui_capture_utils.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+gui_channel_scan.o: gui_channel_scan.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+gui_detailed_scan.o: gui_detailed_scan.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+gui_gen_protocol_scan.o: gui_gen_protocol_scan.c \
+ ../libcommon/definition.h sniff_include.h ../libcommon/crc-32.h \
+ ../libcommon/frame_info.h ../libcommon/logger.h \
+ ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+gui_main.o: gui_main.c ../libcommon/definition.h sniff_include.h \
+ ../libcommon/crc-32.h ../libcommon/frame_info.h ../libcommon/logger.h \
+ ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+gui_tcp_analysis_scan.o: gui_tcp_analysis_scan.c \
+ ../libcommon/definition.h sniff_include.h ../libcommon/crc-32.h \
+ ../libcommon/frame_info.h ../libcommon/logger.h \
+ ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+ids_scan.o: ids_scan.c
+mon_ids.o: mon_ids.c ../libcommon/definition.h sniff_include.h \
+ ../libcommon/crc-32.h ../libcommon/frame_info.h ../libcommon/logger.h \
+ ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+p802_11b_parser.o: p802_11b_parser.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+packet_abstraction.o: packet_abstraction.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+runtime.o: runtime.c ../libcommon/definition.h sniff_include.h \
+ ../libcommon/crc-32.h ../libcommon/frame_info.h ../libcommon/logger.h \
+ ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+server.o: server.c ../libcommon/definition.h sniff_include.h \
+ ../libcommon/crc-32.h ../libcommon/frame_info.h ../libcommon/logger.h \
+ ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h
+sniffer_engine.o: sniffer_engine.c ../libcommon/definition.h \
+ sniff_include.h ../libcommon/crc-32.h ../libcommon/frame_info.h \
+ ../libcommon/logger.h ../libcommon/packet_card.h ../libcommon/utility.h \
+ ../libcommon/definition.h ../libncurses/attrs.h ../libncurses/error.h \
+ ../libncurses/deskman.h ../libncurses/input.h ../libncurses/stdwinset.h \
+ ../libncurses/menurt.h ../libncurses/stdwinset.h capture_engine.h \
+ channel_scan.h detailed_analysis.h detailed_scan.h gui_main.h \
+ gui_capture_utils.h gui_channel_scan.h gui_detailed_scan.h \
+ gui_gen_protocol_scan.h gui_tcp_analysis_scan.h mon_ids.h server.h \
+ runtime.h packet_abstraction.h p802_11b_parser.h sniffer_engine.h

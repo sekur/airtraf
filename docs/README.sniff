@@ -1,0 +1,66 @@
+- AirTraf 0.5.0  sniff_server Information		4/15/2002
+
+Here are some requirements for running the sniff_server
+properly.
+
+1) need compatible wireless cards (prism2 or aironet)
+2) need compatible drivers (linux-wlan-ng or airo-linux)
+3) need those drivers patched with airids patches to enable detection
+of signal strength
+4) I'll have the aironet drivers available for download at my
+sourceforge project page. (http://www.sourceforge.net/projects/airtraf)
+5) I'll also have prism2 drivers available, but it is not ready yet,
+so in the meantime, visit (http://www.elixar.net/wireless) to learn
+howto work with prism2 drivers, as well as aironet drivers.
+
+@) Building sniff_server
+~~~~~~~~~~~~~~~~~~~~~~~~
+1. sniff_server should be built automagically when you do 'make all' in
+   the src directory
+
+Okay, for best results, you should try to use aironet, since it lets
+you sniff on all channels at once, which is key in trying to see
+interference, and such.  Prism2 should work as well, but it is not as
+thoroughly tested as of now, so hold off a bit if there are problems,
+and I will quickly make things work better.
+
+I've also included a quick script for putting aironet card into
+promisc. mode, assuming that you have the proper drivers for it.
+Also, script for putting prismII card into promisc. mode is available.
+You can find both under the scripts directory...
+
+Once everything's setup, you can run it using various command-line
+options.  For a quick review, type './airtraf -h' for list of usage.
+
+The basic interface is ncurses, which I wrote to be able to show some
+of the data that can be collected using AirTraf.  But the
+power-feature will be coming later as the poll_server gets mature.
+For more info on difference between sniff_server & poll_server, goto
+the 'docs' directory.  I'll have more pertinent documentation there as
+I get more time to write things up.
+
+Once you get into the ncurses interactive window, you may notice that
+some of the menu functions don't work.  Yes, you're absolutely
+correct.  They *do NOT* work.  I just haven't written code for them
+yet :)  But they are there for some idea as to what will be coming up
+next.  Currently "most" of the menu's are functioning properly...  as
+to figuring out what does what, I leave that to you to try & see :)
+
+Well, so that's it for now...  If there are any questions, feel free
+to contact me directly (saint@elixar.net) or post on the sourceforge
+project page.  I'll get them either way.
+
+Its great to have the seventh release, and I'm excited to inform you that
+there's been consistent interest in the project, and its getting on its
+way.  
+
+BTW, again, please inform me of any bugs that pop up.
+
+Anyhow, enjoy!
+
+Peter K. Lee
+saint@elixar.net
+http://www.elixar.net/wireless
+http://sourceforge.net/projects/airtraf
+*NEW*
+http://airtraf.sourceforge.net

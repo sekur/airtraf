@@ -1,0 +1,4 @@
+logger.o: logger.c definition.h utility.h
+packet_card.o: packet_card.c definition.h frame_info.h packet_card.h \
+ ../sniffd/autoconfig.h
+utility.o: utility.c definition.h utility.h ipcsum.h

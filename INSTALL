@@ -1,0 +1,23 @@
+- AirTraf 1.0 Installation			11/21/2002
+
+/* Quick Install guide for installing AirTraf 1.0      */
+*-------------------------------------------------------*
+
+@) Building all at once
+~~~~~~~~~~~~~~~~~~~~~~~~
+1. from the airtraf main directory, change into src directory.
+2. Run 'make all' to get a fresh compilation.
+
+@) Installing
+~~~~~~~~~~~~~~
+1. also from the src directory, do 'make install'
+
+@) Running
+~~~~~~~~~~~~
+1. run 'airtraf' and it should auto-configure & run.
+
+
+That's it!
+
+- Elixar Team
+support@elixar.com

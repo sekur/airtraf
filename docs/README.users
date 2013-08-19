@@ -1,0 +1,140 @@
+- AirTraf v0.5.0 Documentation for Users		04/15/2002
+
+  First of all, I'd like to thank (Robert Currier, Director of OIT at Duke
+University) for giving me this wonderful opportunity to explore the
+network programming aspect of wireless LAN's.  
+
+
+/* Background Objective */
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Here I'll attempt to explore the "motive" or the "purpose" of the
+writing of this software.  Let's face the facts, as wireless LAN
+grows, management of Access Points becomes nearly impossible.  It is
+hard to measure the demand of Access Points, even more difficult to
+know whether the given Access Point is even achieving its desired
+effect.  There simply exists no means to know the traffic on the
+Access Points, what the bandwidth the AP is operating under at times,
+whether more AP's need to be deployed in a certain area, or even
+whether you don't even need an AP there because other AP's covers the
+area.  It is even more difficult as individuals deploy their own
+Access Points for home use that you don't know anything about, and
+whether those individuals have setup their own AP's which in turn
+interfere and conflict with AP's already deployed in the area.  In
+circumstances like this, it is daunting for network administrators to
+properly allocate resources to make "ubiquitous wireless computing" a
+reality for their particular organization.
+
+
+/* How AirTraf Helps wireless LAN's */
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  So here comes AirTraf.  It is a 100% passive listening software,
+which looks at every single 802.11b frames transmitted across the
+air.  It works by having a simple Linux box deployed around the area
+where Access Points are located at, with two network interfaces, the
+wireless NIC (placed in promiscuous mode), and a standard ethernet NIC
+that connects to the network backbone.  In this setup, the wireless
+card sniffs on the air, registering every single packet in the air,
+and the standard ethernet NIC waits for a connection from the "polling
+server" and sends the current wireless activity statistic to the main
+server.  The information registered by AirTraf sniffer software is as
+follows:
+
+Management Frames (key types such as beacons)
+* registers number of packets
+* registers total byte of packets
+* registers Bandwidth used by management frames
+
+Control Frames (key types such as Acknowledgement)
+* registers number of packets
+* registers total byte of packets
+* registers Bandwidth used by control frames
+
+Data Frames (differentiated between external/internal data)
+* registers number of packets coming in from external connection
+* registers total byte of packets from external connection
+* registers number of packets coming from internally connected
+wireless nodes
+* registers total byte of packets from internal connection
+* registers total number of data packets
+* registers total byte of data packets
+* registers total Bandwidth of data frames
+
+Overall Activity
+* registers Total number of ALL packets
+* registers Total bytes of ALL packets
+* registers Total Bandwidth usage
+
+Connected Nodes
+* keeps track of connected "wireless" nodes 
+* remembers the MAC address of wireless nodes
+* keeps track of incoming/outgoing traffic of wireless nodes
+* keeps track of signal strength of wireless nodes
+* keeps track of bandwidth usage by wireless nodes
+
+And the above information is detected by a single sniffer for ALL
+access points in the given area. (using aironet, prismII)
+
+*NEW* Intrusion Detection System (currently disabled)
+* tracks mac addresses of nodes making access level activity
+  (probe, association, authentication, etc.)
+* shows response of access point to node's requests
+* keeps count of such activity made by detected wireless nodes
+* makes educated guess as to which nodes are deemed suspicious
+
+New & Improved Channel Scanning System
+* does auto surfing of channels when running with prismII cards
+* retrieve various information about each access points detected
+
+General Protocl Analysis System
+* lets you get an overview of protocol activity in the wireless area
+* view datalink layer, network layer, transport layer info
+* 802.11b breakdown, IP/IPv6/Other, TCP/UDP/ICMP/Other breakdown
+* view count/byte, bandwidth usage, usage % statistics for all protocols
+
+TCP Performance Analysis System
+* target your investigation to individual wireless nodes
+* view all TCP connections made to/from wireless node
+* grouped under (IP, service port) pairs, view connection status,
+  total packet/byte, incoming/outgoing packet/byte, retransmission
+  rates, resource waste %, incoming/outgoing/RTT latencies, as well
+  as incoming/outgoing/overall bandwidth (current, as well as higest
+  observed).
+
+
+/* The difference between sniff_server and poll_server */
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  The sniff_server is the setup described above, a Linux box with two
+network interface cards (wireless/ethernet).  This is the server that
+tracks all wireless traffic, all the time.
+
+  The poll_server is the main central server that periodically polls
+the known "sniff_servers" and acquires the wireless traffic
+information from the sniffers.  The number of sniff_servers a single
+polling server can handle is only limited by the
+performance/load/connection of the polling server to the rest of the
+sniff servers.
+
+  The polling server creates multiple threads to periodically acquire
+wireless traffic information from the deployed sniffer servers, and
+dumps the acquired information into a mySQL database that is setup
+internally on the local computer/or remotely in a different machine.
+Therefore the frontend is a web-based interface written in PHP as well
+as Java to display the acquired information as a single point of
+access, in a visually relevant manner, tracking daily bandwidth usage
+for each access points being monitored, as well as current dynamic
+usage on the access point via a Java Applet.  
+
+  The main engine of the polling server is complete, yet the web/php
+interface as well as Java applet is still to come...
+
+
+/* Which Wireless Cards are supported */
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Currently, two cards are enabled to be placed into promiscuous
+mode.  Cards based on PrismII chipset, and cards based on Cisco
+Aironet chipset.  The appropriate Linux drivers for each card will be
+described in detail under the README.install section.
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$1" == "" ]; then
+	echo "$0 <wireless interface>"
+	exit
+fi
+
+iwconfig $1 essid off
+echo "Mode: r" > /proc/driver/aironet/$1/Config
+echo "Mode: y" > /proc/driver/aironet/$1/Config
+ifconfig $1 up

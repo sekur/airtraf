@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$1" == "" ]; then
+	echo "$0 <wireless interface>"
+	exit
+fi
+
+iwpriv $1 monitor 0 1
+ifconfig $1 up
+

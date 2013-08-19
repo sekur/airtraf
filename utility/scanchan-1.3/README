@@ -1,0 +1,99 @@
+- ScanChan 1.3 Installation
+
+ScanChan ONLY works with Prism2 cards! Assuming you have one of these,
+and a linux installation, you must have the following available to
+use ScanChan:
+
+       * Kernel source code
+       * PCMCIA CS package source code
+       *** linux-wlan-ng-version 
+	(You must have version 0.1.9 patched with AirIDS PF_PACKET patch.)
+       *** wlan-monitor patch
+       * scanchan source
+
+All of these are available on my website <www.elixar.net/wireless>.
+
+*** ones are the key elements necessary to operate in promiscuous mode.
+
+Consult documentation that comes with those packages to get your system
+up and running.
+
+
+/* Quick Install guide grabbed from airsnort installation guide */
+**----------------------------------------------------------------**
+
+To start, you must configure the kernel source code. This will link
+the include directories in the the source tree to the system wide
+directory, /usr/include. The kernel source code need not be compiled
+or installed, but it must be the same version as the one running. The
+kernel version can be determined with the command 'uname -a.' In
+addition, the running needs to support loadable modules, PCMCIA and
+netlink. If the running kernel does not support these, you will need
+to compile and install the source code.
+
+The source code for PCMCIA must be installed, and it must be the same
+as the version you are running. To determine the version of PCMCIA CS
+you are running, consult the output of the command 'cardmgr -V.' If you
+have the appropriate version, you need not compile and install the
+source code, but you must complete the configuration process. All of
+the defaults are okay.
+
+The linux-wlan-ng is the kernel module to drive wlan cards. Only the
+Prism2 driver supports raw packet capturing, so it is the only one we
+are interested in. This card's driver no longer supports raw packet
+capture, but it can easily be added. From the directory which contains
+the linux-wlan-ng, run the command 
+
+$ patch -p1 < airids-prism2-wlan-ng-0.1.9.patch
+
+Then you must make and install the linux-wlan-ng driver. You must
+[re]start the cardmgr, and you can then insert your wlan card. If
+anything failed, consult the linux-wlan-ng documentation.  This is the
+last prerequisite for ScanChan.
+
+**----------------------------------------------------------------**
+
+Assuming everything went well, ScanChan can now be built. This makes
+one executables, 'scanchan.'  
+
+This step is very simple:
+
+make
+
+And it will build your very own copy of scanchan.
+
+
+- Running ScanChan
+
+ScanChan makes calls to 'wlanctl-ng' tool that comes with installation
+of the wlan-ng package.  Make sure 'wlanctl-ng' is in your path, or it
+is somewhere that it can be found.  You should also possess certain 
+priviledges to control the card, so you should run it as 'root'.  
+
+Currently, ScanChan will *not* recognize WEP encrypted packets.  In the
+case that the card detects 'activity' in the channel, but is unable to grab
+the relavent packet (beacon management frame), it will report: 
+'unknown interference detected'
+
+In most likely case, you will pick up activity at channels close to the 
+designated channel that the AP is set to use.  Initially, I was quite 
+surprised at this phenemonon until someone let me know that this is just
+the radio characteristic of IEEE 802.11.
+
+./scanchan (no options necessary) is all you need to scan through available
+channels and get an output of occupied channels, SSID of the AP, and the 
+primary channel reported by the AP.  It is not a very complicated program,
+quite small actually, so there shouldn't be much *issues*.
+
+In the case of discovery of bugs, failures, crashes, and so on, please don't
+send me hate mails :), but detail the circumstance, its effect, and I'll have 
+it fixed.  But the program should be simple enough that you could probably do it
+yourself.  If that's the case, send me the modified version, and I'll have
+the "better" working one up on my webpage.
+
+Please visit <www.elixar.net/wireless> from time to time to see if there are
+any updates (*hint* WEP detection).
+
+It's a pleasure to contribute something *useful* (hopefully...) to the community.
+
+Elixar.net --Peter K. Lee (pkl@duke.edu)

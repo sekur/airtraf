@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ $# -lt 1 ]; then
+	echo -e "Usage: setchan (channel #)"
+	
+	elif [ $1 -gt 0 ] && [ $1 -lt 15 ]
+	then
+		wlanctl-ng wlan0 lnxreq_wlansniff channel=$1 enable=true	
+	else
+		echo -e "Invalid Channel!  Pick between (1-14)"
+fi

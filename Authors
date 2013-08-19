@@ -1,0 +1,10 @@
+AirTraf Developers
+------------------
+Peter K. Lee <saint@elixar.com>
+visit @ www.elixar.com
+
+Other Sources used in AirTraf
+-----------------------------
+Gerald Paul Java (ncurses library routines)
+Mike Lynn (frame_info.h & modified aironet driver)
+Gary S. Brown & Jeremy Bruestle (crc-32 code)

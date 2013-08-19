@@ -1,0 +1,37 @@
+- AirTraf 1.0 Compatibility			11/21/2002
+
+/* Supported Drivers */
+*---------------------*
+
+@) Wlan-ng for Prism2 Cards.
+homepage: (http://www.linux-wlan.com/linux-wlan/index.html)
+download: (ftp://ftp.linux-wlan.org/pub/linux-wlan-ng)
+
+@) HostAP for Prism2 Cards.
+homepage: (http://hostap.epitest.fi)
+download: (http://hostap.epitest.fi/releases)
+
+*NOTE: If using HostAP driver, get release prior to 2002-09-12 since the
+latest release removes monitor mode 1.  Although the latest driver uses
+mode 2 & 3 which AirTraf has support for, it is currently under investigation
+by Jouni Malinen due to RX errors observed.
+
+@) Cisco Aironet Driver.
+homepage: (http://airo-linux.sourceforge.net)
+download: (CVS in sourceforge || in kernel tree)
+
+*NOTE: Cisco Aironet drivers in kernel tree (2.4.7 and higher)
+work correctly with AirTraf.  If using CVS version on sourceforge, you may
+need to override the interface to (wifi0) when running AirTraf.
+
+@) Orinoco for Hermes-based Cards.
+homepage: (http://airsnort.shmoo.com/orinocoinfo.html)
+download: (http://www.ozlabs.com/people/dgibson/dldwd)
+
+*NOTE: Orinoco driver must be patched to enable monitor mode in order to
+work with AirTraf.  Refer to instructions on the homepage for
+installing the proper driver.
+
+
+- Elixar Team
+support@elixar.com
